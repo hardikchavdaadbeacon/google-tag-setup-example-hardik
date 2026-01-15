@@ -8,6 +8,18 @@
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-N3DCF8J');</script>
     <!-- End Google Tag Manager -->
+    <!-- AdBeacon -->
+    <script>
+    function adBeaconStartRenderingScript() {
+        let t = document.createElement("script");
+        t.src = "https://localhost/adbeacon-saas/public/os/k6ct0ltx21tl3tz8?" + Date.now(),
+            t.async = !0,
+            document.head.append(t);
+    }
+    document.addEventListener("DOMContentLoaded", adBeaconStartRenderingScript);
+    
+    </script>
+    <!-- End AdBeacon -->
 
     <title>Example Webpage</title>
 </head>
