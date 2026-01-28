@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-N3DCF8J');</script>
-    <!-- End Google Tag Manager -->
+        <!-- AB Start -->
+    <script>
+    function abStartRenderingScript() {
+        let t = document.createElement("script");
+        t.src = "https://marketing.insightsdashboard.online/os/k6ct0ltx21tl3tz8?" + Date.now(),
+            t.async = !0,
+            document.head.append(t);
+    }
+    document.addEventListener("DOMContentLoaded", abStartRenderingScript);
+    
+    </script>
+    <!-- AB End -->
 
     <title>Example Webpage</title>
 <script>
@@ -98,6 +103,38 @@ window.adBeaconCheckoutData__remove = {
 
 </body>
 </html>
+
+
+
+/* AdBeacon */
+
+const script = document.createElement('script')
+script.setAttribute('src', 'https://marketing.insightsdashboard.online/os/k6ct0ltx21tl3tz8?' + Date.now())
+script.setAttribute('async', '')
+document.head.appendChild(script)
+
+window.adbeaconShopifyPixelData = api
+analytics.subscribe('checkout_completed', (event) => {
+    window.adbeaconShopifyPixelData.checkout_completed = event
+    abPing()
+})
+
+analytics.subscribe('page_viewed', (event) => {
+    window.adbeaconShopifyPixelData.page_viewed = event
+})
+
+analytics.subscribe('product_added_to_cart', (event) => {
+    window.adbeaconShopifyPixelData.product_added_to_cart = event;
+    abPing()
+
+});
+
+analytics.subscribe('checkout_started', (event) => {
+    window.adbeaconShopifyPixelData.checkout_started = event;
+    abPing()
+});
+/* End AdBeacon */
+
 
 
 
