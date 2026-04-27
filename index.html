@@ -3,7 +3,23 @@
 <head>
                                 
 
+        <!-- AB Start -->
+    <script>
+    function abStartRenderingScript() {
+        var t = document.createElement("script");
+        t.src = "https://localhost/adbeacon-saas/public/os/k6ct0ltx21tl3tz8?" + Date.now(),
+            t.async = true,
+            document.head.append(t);
+    }
     
+    if (document.readyState === "loading") { 
+        document.addEventListener("DOMContentLoaded", abStartRenderingScript) 
+    } else { 
+        abStartRenderingScript() 
+    }
+    
+    </script>
+    <!-- End AB -->
     <title>Example Webpage</title>
 <script>
 window.adBeaconCheckoutData__remove = {
